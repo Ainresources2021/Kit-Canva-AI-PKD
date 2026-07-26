@@ -257,3 +257,20 @@ footer{align-items:flex-start;flex-wrap:wrap}
  }
  .hero .facilitator strong{font-size:1.08em}
 }
+
+/* Professional light gamification */
+.gamify{grid-column:1/-1;margin:22px 0 8px;padding:22px;border:1px solid #d8e8e6;border-radius:20px;background:linear-gradient(135deg,#fff 0%,#f1fbf8 100%);box-shadow:0 14px 35px rgba(7,63,73,.09)}
+.gamify-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:12px}
+.gamify-head div{display:grid;gap:4px}.gamify-head span{font-size:.7em;font-weight:900;letter-spacing:.13em;color:#547177}.gamify-head strong{font-size:1.05em;color:#073f49}.gamify-head>b{font-size:1.55em;color:#ef7b45}
+.progress-track{height:13px;overflow:hidden;border-radius:999px;background:#dcebea;box-shadow:inset 0 2px 4px rgba(0,0,0,.08)}
+.progress-track i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#0c8b83,#39b8a6,#f39a55);transition:width .55s ease}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:17px}
+.badges span{min-height:74px;display:flex;align-items:center;gap:10px;padding:12px;border:1px dashed #bdd2cf;border-radius:14px;background:#f7faf9;color:#91a5a2;filter:grayscale(1);opacity:.65}
+.badges span.earned{border-style:solid;border-color:#efb27e;background:#fff6ed;color:#71401d;filter:none;opacity:1;box-shadow:0 7px 18px rgba(239,123,69,.12)}
+.badges b{display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:50%;background:#e4eceb;font-size:1.05em}.badges .earned b{background:#ef7b45;color:#fff}
+.badges small{font-weight:850;line-height:1.25}
+.champion{grid-column:1/-1;position:relative;overflow:hidden;border-radius:16px}.champion .success{margin:0;padding:17px 20px;background:linear-gradient(90deg,#0a7d75,#0f9b8e);color:#fff;text-align:center;font-weight:900}
+.confetti{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-around;color:#ffd36a;font-size:1.25em;letter-spacing:2.2em;opacity:.5;animation:celebrate 1.4s ease-in-out infinite alternate;pointer-events:none}
+@keyframes celebrate{from{transform:translateY(-8px) rotate(-2deg)}to{transform:translateY(9px) rotate(2deg)}}
+@media(max-width:700px){.badges{grid-template-columns:1fr 1fr}.gamify{padding:17px}.gamify-head{align-items:center}.gamify-head strong{font-size:.9em}.badges span{min-height:66px;padding:10px}.confetti{letter-spacing:.8em}}
+@media(prefers-reduced-motion:reduce){.progress-track i,.confetti{transition:none;animation:none}}
